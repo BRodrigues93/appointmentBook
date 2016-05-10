@@ -13,13 +13,22 @@
 	<a href="https://github.com/BRodrigues93" target="_blank">• Bruno Rodrigues</a> • 
 </p>
 
-## :computer: Divisões
+## :computer: Métodos
 Developer | Method | @Test | Descrição
 :-- | :-- | :-- | :--
 [ Bruno Rodrigues  ] | POST/:id | OK              | Insere Contato;
 [ Bruno Rodrigues  ] | GET/:id | OK              | Retorna Contato;
 
-
+## :beginner: Requisitos 
+* Um servidor REST de Agenda
+  - A agenda é composta por contatos, cada contato tem um nome e um telefone
+  - Implementar dois métodos:
+		* POST /:id
+		         : Passando no corpo do request o JSON com nome e telefone do contato;
+		         : Retorna o JSON do contato adicionado.
+		* GET /:id
+		         : Não passa nada no corpo do request;
+		         : Retorna o JSON do contato adicionado.
 
 
 
