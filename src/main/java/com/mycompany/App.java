@@ -67,9 +67,9 @@ public class App extends Jooby {
                 message = "O campo 'número de telefone' não pode estar vazio.";
             } else {
                 statusCode = 200;
-                contato.setId(this.lastInsertId);
-                this.lastInsertId++;
-                this.contacts.add(contato);
+                contato.setId(this.lastId);
+                this.lastId++;
+                this.agendas.add(contato);
                 message = mapper.writeValueAsString(contato);
             }return Results.with(message).status(statusCode).type("text/plain");
         });
