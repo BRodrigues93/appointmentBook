@@ -12,7 +12,7 @@ import org.jooby.json.Jackson;
 public class App extends Jooby {
 
     private ArrayList<Contact> contatos = new ArrayList<>();
-    private int lastInsertId = 1;
+    private int lastId = 1;
 
     {
         use(new Jackson());
@@ -69,7 +69,7 @@ public class App extends Jooby {
                 statusCode = 200;
                 contato.setId(this.lastId);
                 this.lastId++;
-                this.agendas.add(contato);
+                this.contacts.add(contato);
                 message = mapper.writeValueAsString(contato);
             }return Results.with(message).status(statusCode).type("text/plain");
         });
