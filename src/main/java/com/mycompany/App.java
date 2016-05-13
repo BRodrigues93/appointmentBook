@@ -20,7 +20,7 @@ public class App extends Jooby {
 
         /**Método - Chamada do servidor*/
         get("", req -> {
-            return "Appointment Book Eng.Soft v1.0";
+            return "Appointment Book Eng.Soft";
         });
 
         /**
