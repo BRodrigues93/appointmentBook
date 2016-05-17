@@ -50,6 +50,6 @@ git config --global user.name seuNome | Seta um nome global para o computador;
 
 ## :book: Métodos
 * GET: Retorna "Primeira tela";
-* GET/TODOS: Retorna contatos por ID;
-* POST/TODOS: Adiciona novo contato com os dados Nome e telefone(obrigatórios).
+* GET/ID: Retorna contatos por ID;
+* POST/ID: Adiciona novo contato com os dados Nome e telefone(obrigatórios).
 
