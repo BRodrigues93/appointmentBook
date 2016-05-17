@@ -14,6 +14,7 @@ import org.jooby.json.Jackson;
 public class App extends Jooby {
 
     private ArrayList<Contact> contatos = new ArrayList<>();
+    
     private int lastId = 1;
 
     {
@@ -23,8 +24,7 @@ public class App extends Jooby {
         /**Método - Chamada do servidor
          * Tela de "Bem Vindos"
          */
-        get("", req -> {
-            return "Appointment Book Eng.Soft";
+        get("", req -> {return "Appointment Book Eng.Soft";
         });
 
         /**
@@ -75,7 +75,8 @@ public class App extends Jooby {
                 this.lastId++;
                 this.contacts.add(contato);
                 message = mapper.writeValueAsString(contato);
-            }return Results.with(message).status(statusCode).type("text/plain");
+            }
+            return Results.with(message).status(statusCode).type("text/plain");
         });
     }
     public static void main(final String[] args) throws Throwable {
