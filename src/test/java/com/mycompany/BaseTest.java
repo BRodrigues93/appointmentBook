@@ -11,14 +11,14 @@ import org.junit.Rule;
 public class BaseTest {
 
   /**
-   * One app/server for all the test of this class. If you want to start/stop a new server per test,
-   * remove the static modifier and replace the {@link ClassRule} annotation with {@link Rule}.
+   * Um app/server para todo o teste desta classe .. Se você quiser, start/stop para um novo servidor de teste ,
+   * Remover o modificador estático e substituir o {@link ClassRule} anotação com {@link Rule}.
    */
   @ClassRule
   public static AppRule app = new AppRule(new App());
 
   /**
-   * One client per test. It creates a new HTTP client per each of the test method you have.
+   * Um Cliente por teste. Ele cria um novo HTTP Cliente pora cada um dos método de teste que você tem.
    */
   @Rule
   public Client server = new Client("http://localhost:8080");
