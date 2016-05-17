@@ -52,4 +52,11 @@ git config --global user.name seuNome | Seta um nome global para o computador;
 * GET: Retorna "Primeira tela";
 * GET/ID: Retorna contatos por ID;
 * POST/ID: Adiciona novo contato com os dados Nome e telefone(obrigatórios).
+* 
 
+## :octocat: Aplicando Acesso
+Method | URL | Body | Return
+:-- | :-- | :-- | :-- 
+GET | http://localhost:8080/ | -- |"AppointmentBook";
+GET | http://localhost:8080/contato/:id | id: 13 |id: 13, Nome: "Bruno", Telefone: "82999490404";
+POST | http://localhost:8080/contato | Nome: "Bruno", Telefone: "82999490404" | -- ;
