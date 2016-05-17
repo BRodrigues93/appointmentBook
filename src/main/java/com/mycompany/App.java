@@ -7,7 +7,9 @@ import org.jooby.Results;
 import org.jooby.json.Jackson;
 
 /**
- * @author Bruno Rodrigues
+ * @author Bruno Rodrigues;
+ * App para inserir e consultar dados de uma agente (AppointmentBook);
+ * v 1.0
  */
 public class App extends Jooby {
 
@@ -18,15 +20,17 @@ public class App extends Jooby {
         use(new Jackson());
         use(TestRoute.class);
 
-        /**Método - Chamada do servidor*/
+        /**Método - Chamada do servidor
+         * Tela de "Bem Vindos"
+         */
         get("", req -> {
             return "Appointment Book Eng.Soft";
         });
 
         /**
          * Método - buscar um contato por id;
-         * @param id do contato / id usado para recuperar os dados
-         * @return Resultado
+         * @param id do contato / id usado para consultar os dados;
+         * @return Resultado;
          */
         get("/contato/:id", req -> {
             int id = Integer.parseInt(req.param("id").value()) - 1;
@@ -49,8 +53,8 @@ public class App extends Jooby {
         });
 
         /**
-         * Método - inserir contato
-         * @return resultado com contato já cadastrado
+         * Método - Adicionar novo contato;
+         * @return resultado com contato já cadastrado;
          */
         post("/contato", req -> {
             ObjectMapper mapper = new ObjectMapper();
